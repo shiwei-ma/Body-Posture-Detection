@@ -1,0 +1,1233 @@
+
+*** Running vivado
+    with args -log posture_detection.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source posture_detection.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source posture_detection.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/Desktop/SEA-master/Examples/FPGA-IP/Mini-HDMI-IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top posture_detection -part xc7s15ftgb196-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s15'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 394.258 ; gain = 103.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'posture_detection' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:22]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [E:/Desktop/posture_detection/posture_detection.runs/synth_1/.Xil/Vivado-13260-DESKTOP-FDTNK2B/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [E:/Desktop/posture_detection/posture_detection.runs/synth_1/.Xil/Vivado-13260-DESKTOP-FDTNK2B/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'clk_148_5' of module 'clk_wiz_0' requires 4 connections, but only 3 given [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:78]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [G:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (2#1) [G:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+INFO: [Synth 8-6157] synthesizing module 'deal_data' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/deal_data.v:22]
+	Parameter DATA_W bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'deal_data' (3#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/deal_data.v:22]
+WARNING: [Synth 8-689] width (16) of port connection 'angle' does not match port width (10) of module 'deal_data' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:92]
+WARNING: [Synth 8-689] width (16) of port connection 'move_X' does not match port width (10) of module 'deal_data' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:93]
+WARNING: [Synth 8-689] width (16) of port connection 'move_Y' does not match port width (10) of module 'deal_data' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:94]
+INFO: [Synth 8-6157] synthesizing module 'Gyro_Demo' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Gyro_Demo.v:23]
+WARNING: [Synth 8-350] instance 'clk_10' of module 'clk_wiz_0' requires 4 connections, but only 3 given [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Gyro_Demo.v:60]
+INFO: [Synth 8-6157] synthesizing module 'Driver_Gyro' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:31]
+	Parameter State_Init bound to: 0 - type: integer 
+	Parameter State_Temp bound to: 1 - type: integer 
+	Parameter State_Gyro bound to: 2 - type: integer 
+	Parameter State_Acc bound to: 3 - type: integer 
+	Parameter State_Stop bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Clk_Division' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Clk_Division.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Clk_Division' (4#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Clk_Division.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:129]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:278]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:292]
+WARNING: [Synth 8-6014] Unused sequential element Read_Req_reg was removed.  [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:180]
+WARNING: [Synth 8-6014] Unused sequential element Write_Req_reg was removed.  [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:210]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_Gyro' (5#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:31]
+INFO: [Synth 8-6157] synthesizing module 'Driver_IIC' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_IIC.v:22]
+	Parameter SCL_SUM bound to: 13'b0001111101000 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter START0 bound to: 5'b00001 
+	Parameter WRSADDR0 bound to: 5'b00010 
+	Parameter ACK0 bound to: 5'b00011 
+	Parameter WRRADDR bound to: 5'b00100 
+	Parameter ACK1 bound to: 5'b00101 
+	Parameter WRDATA bound to: 5'b00110 
+	Parameter ACK2 bound to: 5'b00111 
+	Parameter STOP bound to: 5'b01000 
+	Parameter START1 bound to: 5'b01001 
+	Parameter WRSADDR1 bound to: 5'b01010 
+	Parameter ACK3 bound to: 5'b01011 
+	Parameter RDDATA bound to: 5'b01100 
+	Parameter NOACK bound to: 5'b01101 
+	Parameter WRRADDR_H bound to: 5'b01110 
+	Parameter ACK4 bound to: 5'b01111 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_IIC.v:333]
+WARNING: [Synth 8-5788] Register IIC_Read_Data_reg in module Driver_IIC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_IIC.v:401]
+INFO: [Synth 8-6155] done synthesizing module 'Driver_IIC' (6#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_IIC.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Gyro_Demo' (7#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Gyro_Demo.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rgb2dvi_0' [E:/Desktop/posture_detection/posture_detection.runs/synth_1/.Xil/Vivado-13260-DESKTOP-FDTNK2B/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi_0' (8#1) [E:/Desktop/posture_detection/posture_detection.runs/synth_1/.Xil/Vivado-13260-DESKTOP-FDTNK2B/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'VGA_driver' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/VGA_driver.v:25]
+	Parameter H_ACTIVE_1280_720 bound to: 16'b0000010100000000 
+	Parameter H_FP_1280_720 bound to: 16'b0000000001101110 
+	Parameter H_SYNC_1280_720 bound to: 16'b0000000000101000 
+	Parameter H_BP_1280_720 bound to: 16'b0000000011011100 
+	Parameter V_ACTIVE_1280_720 bound to: 16'b0000001011010000 
+	Parameter V_FP_1280_720 bound to: 16'b0000000000000101 
+	Parameter V_SYNC_1280_720 bound to: 16'b0000000000000101 
+	Parameter V_BP_1280_720 bound to: 16'b0000000000010100 
+	Parameter H_TOTAL_1280_720 bound to: 16'b0000011001110010 
+	Parameter V_TOTAL_1280_720 bound to: 16'b0000001011101110 
+	Parameter H_ACTIVE_1920_1080 bound to: 16'b0000011110000000 
+	Parameter H_FP_1920_1080 bound to: 16'b0000000001011000 
+	Parameter H_SYNC_1920_1080 bound to: 16'b0000000000101100 
+	Parameter H_BP_1920_1080 bound to: 16'b0000000010010100 
+	Parameter V_ACTIVE_1920_1080 bound to: 16'b0000010000111000 
+	Parameter V_FP_1920_1080 bound to: 16'b0000000000000100 
+	Parameter V_SYNC_1920_1080 bound to: 16'b0000000000000101 
+	Parameter V_BP_1920_1080 bound to: 16'b0000000000100100 
+	Parameter H_TOTAL_1920_1080 bound to: 16'b0000100010011000 
+	Parameter V_TOTAL_1920_1080 bound to: 16'b0000010001100101 
+INFO: [Synth 8-6155] done synthesizing module 'VGA_driver' (9#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/VGA_driver.v:25]
+INFO: [Synth 8-6157] synthesizing module 'Video_Generator' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Video_Generator.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Video_Generator' (10#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Video_Generator.v:22]
+WARNING: [Synth 8-689] width (16) of port connection 'move_X' does not match port width (10) of module 'Video_Generator' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:144]
+WARNING: [Synth 8-689] width (16) of port connection 'move_Y' does not match port width (10) of module 'Video_Generator' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:145]
+WARNING: [Synth 8-350] instance 'Video_Generator_0' of module 'Video_Generator' requires 8 connections, but only 7 given [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:139]
+INFO: [Synth 8-6157] synthesizing module 'coor_trans' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans.v:23]
+	Parameter IMAGE_W bound to: 1920 - type: integer 
+	Parameter IMAGE_H bound to: 1080 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'coor_trans_forward' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans_forward.v:22]
+	Parameter IMAGE_W bound to: 1920 - type: integer 
+	Parameter IMAGE_H bound to: 1080 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coor_trans_forward' (11#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans_forward.v:22]
+INFO: [Synth 8-6157] synthesizing module 'cos_table' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/cos_table.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'cos_table' (12#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/cos_table.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sin_table' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/sin_table.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'sin_table' (13#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/sin_table.v:22]
+INFO: [Synth 8-6157] synthesizing module 'coor_trans_reverse' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans_reverse.v:23]
+	Parameter IMAGE_W bound to: 1920 - type: integer 
+	Parameter IMAGE_H bound to: 1080 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'coor_trans_reverse' (14#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans_reverse.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coor_trans' (15#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans.v:23]
+WARNING: [Synth 8-689] width (16) of port connection 'angle' does not match port width (10) of module 'coor_trans' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:152]
+WARNING: [Synth 8-689] width (12) of port connection 'x_out' does not match port width (32) of module 'coor_trans' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:155]
+WARNING: [Synth 8-689] width (12) of port connection 'y_out' does not match port width (32) of module 'coor_trans' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:156]
+INFO: [Synth 8-6155] done synthesizing module 'posture_detection' (16#1) [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:22]
+WARNING: [Synth 8-3917] design posture_detection has port IIC_OE driven by constant 1
+WARNING: [Synth 8-3917] design posture_detection has port VCCEN driven by constant 1
+WARNING: [Synth 8-3917] design posture_detection has port VCC driven by constant 1
+WARNING: [Synth 8-3917] design posture_detection has port GND driven by constant 0
+WARNING: [Synth 8-3331] design coor_trans_reverse has unconnected port clk
+WARNING: [Synth 8-3331] design coor_trans_reverse has unconnected port rst_n
+WARNING: [Synth 8-3331] design sin_table has unconnected port clk
+WARNING: [Synth 8-3331] design sin_table has unconnected port rst_n
+WARNING: [Synth 8-3331] design cos_table has unconnected port clk
+WARNING: [Synth 8-3331] design cos_table has unconnected port rst_n
+WARNING: [Synth 8-3331] design coor_trans_forward has unconnected port clk
+WARNING: [Synth 8-3331] design coor_trans_forward has unconnected port rst_n
+WARNING: [Synth 8-3331] design Video_Generator has unconnected port RGB_VDE
+WARNING: [Synth 8-3331] design Gyro_Demo has unconnected port Gyro_IIC_SDA
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 450.742 ; gain = 159.641
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Video_Generator_0:rst_n to constant 0 [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/posture_detection.v:139]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 450.742 ; gain = 159.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 450.742 ; gain = 159.641
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7s15ftgb196-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Gyro_Demo_0/clk_10'
+Finished Parsing XDC File [e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Gyro_Demo_0/clk_10'
+Parsing XDC File [e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_148_5'
+Finished Parsing XDC File [e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_148_5'
+Parsing XDC File [e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc] for cell 'rgb2dvi_0'
+Finished Parsing XDC File [e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc] for cell 'rgb2dvi_0'
+Parsing XDC File [E:/Desktop/posture_detection/posture_detection.srcs/constrs_1/new/pin1.xdc]
+Finished Parsing XDC File [E:/Desktop/posture_detection/posture_detection.srcs/constrs_1/new/pin1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Desktop/posture_detection/posture_detection.srcs/constrs_1/new/pin1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/posture_detection_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/posture_detection_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 763.660 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 763.660 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 763.660 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 763.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 763.660 ; gain = 472.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s15ftgb196-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 763.660 ; gain = 472.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Clk_N. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Clk_N. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Clk_P. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Clk_P. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[0]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[0]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[1]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[1]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[2]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_N[2]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[0]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[0]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[1]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[1]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[2]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for TMDS_Tx_Data_P[2]. (constraint file  e:/Desktop/posture_detection/posture_detection.srcs/sources_1/ip/rgb2dvi_0/rgb2dvi_0/rgb2dvi_0_in_context.xdc, line 16).
+Applied set_property DONT_TOUCH = true for Gyro_Demo_0/clk_10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clk_148_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rgb2dvi_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 763.660 ; gain = 472.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "Gryo" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "v_X" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'Current_State_reg' in module 'Driver_Gyro'
+INFO: [Synth 8-802] inferred FSM for state register 'Init_State_reg' in module 'Driver_Gyro'
+INFO: [Synth 8-802] inferred FSM for state register 'Gyro_State_reg' in module 'Driver_Gyro'
+INFO: [Synth 8-802] inferred FSM for state register 'Acc_State_reg' in module 'Driver_Gyro'
+INFO: [Synth 8-5544] ROM "Flag_State_Temp" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Next_State" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Reg_Addr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Flag_State_Init" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Reg_Addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Gyro_Data_Z_FIFO" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Flag_State_Gyro" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Gyro_Data_X_FIFO" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Gyro_Data_Y_FIFO" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Reg_Addr" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Acc_Data_Z_FIFO" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Flag_State_Acc" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Acc_Data_Y_FIFO" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Acc_Data_X_FIFO" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'c_state_reg' in module 'Driver_IIC'
+INFO: [Synth 8-5546] ROM "SDA_Dir" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "n_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                           000001 |                              000
+                 iSTATE0 |                           000010 |                              001
+                 iSTATE1 |                           000100 |                              010
+                 iSTATE2 |                           001000 |                              011
+                 iSTATE3 |                           010000 |                              100
+                 iSTATE4 |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Acc_State_reg' using encoding 'one-hot' in module 'Driver_Gyro'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                           000001 |                              000
+                 iSTATE0 |                           000010 |                              001
+                 iSTATE1 |                           000100 |                              010
+                 iSTATE2 |                           001000 |                              011
+                 iSTATE3 |                           010000 |                              100
+                 iSTATE4 |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Gyro_State_reg' using encoding 'one-hot' in module 'Driver_Gyro'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                     000000000001 |                             0000
+                 iSTATE4 |                     000000000010 |                             0001
+                 iSTATE1 |                     000000000100 |                             0010
+                  iSTATE |                     000000001000 |                             0011
+                 iSTATE0 |                     000000010000 |                             0100
+                iSTATE10 |                     000000100000 |                             0101
+                 iSTATE9 |                     000001000000 |                             0110
+                 iSTATE7 |                     000010000000 |                             0111
+                 iSTATE8 |                     000100000000 |                             1000
+                 iSTATE6 |                     001000000000 |                             1001
+                 iSTATE3 |                     010000000000 |                             1010
+                 iSTATE2 |                     100000000000 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Init_State_reg' using encoding 'one-hot' in module 'Driver_Gyro'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              State_Init |                              000 |                             0000
+               State_Acc |                              001 |                             0011
+              State_Gyro |                              010 |                             0010
+              State_Temp |                              011 |                             0001
+              State_Stop |                              100 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Current_State_reg' using encoding 'sequential' in module 'Driver_Gyro'
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_reg' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Driver_Gyro.v:141]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0000 |                            00000
+                  START0 |                             0001 |                            00001
+                WRSADDR0 |                             0010 |                            00010
+                    ACK0 |                             0011 |                            00011
+               WRRADDR_H |                             0100 |                            01110
+                    ACK4 |                             0101 |                            01111
+                 WRRADDR |                             0110 |                            00100
+                    ACK1 |                             0111 |                            00101
+                  WRDATA |                             1000 |                            00110
+                    ACK2 |                             1001 |                            00111
+                  START1 |                             1010 |                            01001
+                WRSADDR1 |                             1011 |                            01010
+                    ACK3 |                             1100 |                            01011
+                  RDDATA |                             1101 |                            01100
+                   NOACK |                             1110 |                            01101
+                    STOP |                             1111 |                            01000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'c_state_reg' using encoding 'sequential' in module 'Driver_IIC'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 763.660 ; gain = 472.559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 17    
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 4     
+	   5 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 11    
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 26    
++---Multipliers : 
+	                10x31  Multipliers := 1     
+	                10x32  Multipliers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 5     
+	   6 Input     16 Bit        Muxes := 6     
+	  12 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 4     
+	   3 Input     16 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 9     
+	   6 Input      8 Bit        Muxes := 4     
+	  12 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 2     
+	  13 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 39    
+	   3 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	  16 Input      4 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 13    
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 39    
+	   6 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 3     
+	  13 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module deal_data 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               10 Bit    Registers := 3     
++---Multipliers : 
+	                10x31  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 2     
+Module Clk_Division 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module Driver_Gyro 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 8     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   6 Input     16 Bit        Muxes := 6     
+	  12 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 2     
+	   4 Input     16 Bit        Muxes := 4     
+	   3 Input     16 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   6 Input      8 Bit        Muxes := 4     
+	  12 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 12    
+	   6 Input      1 Bit        Muxes := 2     
+	  12 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 20    
+	   5 Input      1 Bit        Muxes := 3     
+Module Driver_IIC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	  13 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 35    
+	  16 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+	   3 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 2     
+Module VGA_driver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 1     
+	   5 Input     12 Bit       Adders := 1     
+	   3 Input     12 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module Video_Generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   4 Input     24 Bit        Muxes := 1     
+Module coor_trans_forward 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+Module coor_trans_reverse 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+Module coor_trans 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
++---Multipliers : 
+	                10x32  Multipliers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 20 (col length:20)
+BRAMs: 20 (col length: RAMB18 20 RAMB36 10)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'Clk_Division1/Is_Odd_reg' into 'Clk_Division0/Is_Odd_reg' [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/Clk_Division.v:37]
+INFO: [Synth 8-5544] ROM "Flag_State_Temp" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Temp_State0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "Gryo" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "v_X" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+DSP Report: Generating DSP value, operation Mode is: A*(B:0x222e).
+DSP Report: operator value is absorbed into DSP value.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans.v:86]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans.v:86]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans.v:87]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/coor_trans.v:87]
+DSP Report: Generating DSP x_rotate_temp0, operation Mode is: A*B.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: Generating DSP x_rotate_temp0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: Generating DSP x_rotate_temp0, operation Mode is: A*B.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: Generating DSP x_rotate_temp0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: operator x_rotate_temp0 is absorbed into DSP x_rotate_temp0.
+DSP Report: Generating DSP y_rotate_temp0, operation Mode is: A*B.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: Generating DSP y_rotate_temp0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: Generating DSP y_rotate_temp0, operation Mode is: A*B.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: Generating DSP y_rotate_temp0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+DSP Report: operator y_rotate_temp0 is absorbed into DSP y_rotate_temp0.
+WARNING: [Synth 8-3917] design posture_detection has port IIC_OE driven by constant 1
+WARNING: [Synth 8-3917] design posture_detection has port VCCEN driven by constant 1
+WARNING: [Synth 8-3917] design posture_detection has port VCC driven by constant 1
+WARNING: [Synth 8-3917] design posture_detection has port GND driven by constant 0
+WARNING: [Synth 8-3331] design coor_trans has unconnected port clk
+WARNING: [Synth 8-3331] design coor_trans has unconnected port rst_n
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[31]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[30]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[29]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[28]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[27]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[26]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[25]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port x_in[24]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[31]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[30]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[29]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[28]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[27]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[26]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[25]
+WARNING: [Synth 8-3331] design coor_trans has unconnected port y_in[24]
+WARNING: [Synth 8-3331] design Video_Generator has unconnected port RGB_VDE
+WARNING: [Synth 8-3331] design Gyro_Demo has unconnected port Gyro_IIC_SDA
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Clk_Division0/Is_Odd_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Gyro_Data_Z_FIFO_reg[15] )
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[15]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[14]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[14]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[13]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[13]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[12]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[12]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[11]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[11]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[10]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[10]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[9]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[9]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[8]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[7]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Data_reg[7]' (FDE_1) to 'Gyro_Demo_0/Driver_Gyro0/FSM_onehot_Init_State_reg[8]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Reg_Data_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Data_reg[0]' (FDE_1) to 'Gyro_Demo_0/Driver_Gyro0/FSM_onehot_Init_State_reg[8]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[7]' (FDRE_1) to 'Gyro_Demo_0/Driver_Gyro0/Reg_Addr_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/Reg_Addr_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_3/\X_L_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_3/\X_L_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_1/\Y_L_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_1/\Y_L_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_3/\X_L_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_3/\X_L_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_3/\X_L_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_3/\X_L_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_3/\X_L_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_3/\X_L_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_3/\X_L_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_3/\X_L_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_3/\X_L_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_3/\X_L_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_2/\X_R_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_2/\X_R_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_2/\X_R_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_2/\X_R_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_2/\X_R_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_2/\X_R_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_1/\Y_L_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_1/\Y_L_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_1/\Y_L_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_1/\Y_L_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_1/\Y_L_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_1/\Y_L_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_1/\Y_L_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_1/\Y_L_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_1/\Y_L_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_1/\Y_L_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_0/\Y_R_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_0/\Y_R_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_0/\Y_R_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[8] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (Video_Generator_0/i_0/\Y_R_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_0/\Y_R_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Video_Generator_0/i_0/\Y_R_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_Gyro0/FSM_sequential_Current_State_reg[2] )
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_IIC0/scl_cnt_reg[10]' (FDC) to 'Gyro_Demo_0/Driver_IIC0/scl_cnt_reg[13]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_IIC0/scl_cnt_reg[11]' (FDC) to 'Gyro_Demo_0/Driver_IIC0/scl_cnt_reg[13]'
+INFO: [Synth 8-3886] merging instance 'Gyro_Demo_0/Driver_IIC0/scl_cnt_reg[12]' (FDC) to 'Gyro_Demo_0/Driver_IIC0/scl_cnt_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Gyro_Demo_0/\Driver_IIC0/scl_cnt_reg[13] )
+WARNING: [Synth 8-3332] Sequential element (Driver_Gyro0/FSM_onehot_Init_State_reg[11]) is unused and will be removed from module Gyro_Demo.
+WARNING: [Synth 8-3332] Sequential element (Driver_Gyro0/FSM_sequential_Current_State_reg[2]) is unused and will be removed from module Gyro_Demo.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 763.660 ; gain = 472.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+--------------------------+---------------+----------------+
+|Module Name | RTL Object               | Depth x Width | Implemented As | 
++------------+--------------------------+---------------+----------------+
+|cos_table   | cos_value                | 1024x10       | LUT            | 
+|sin_table   | sin_value                | 1024x10       | LUT            | 
+|coor_trans  | sin_table_inst/sin_value | 1024x10       | LUT            | 
++------------+--------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|deal_data   | A*(B:0x222e)   | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | (PCIN>>17)+A*B | 15     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | (PCIN>>17)+A*B | 15     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | (PCIN>>17)+A*B | 15     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | A*B            | 18     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|coor_trans  | (PCIN>>17)+A*B | 15     | 10     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/deal_data.v:84]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'Gyro_Demo_0/clk_10/clk_in1' to pin 'clk_148_5/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'Gyro_Demo_0/clk_10/clk_out1' to pin 'Gyro_Demo_0/clk_10/bbstub_clk_out1/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'Gyro_Demo_0/clk_10/clk_in1' to 'deal_data_0/i_1/cnt_reg[0]/C'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'Gyro_Demo_0/clk_10/clk_out2' to pin 'Gyro_Demo_0/clk_10/bbstub_clk_out2/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'Gyro_Demo_0/clk_10/clk_in1' to 'deal_data_0/i_1/cnt_reg[0]/C'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'Gyro_Demo_0/clk_10/clk_out3' to pin 'Gyro_Demo_0/clk_10/bbstub_clk_out3/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'Gyro_Demo_0/clk_10/clk_in1' to 'deal_data_0/i_1/cnt_reg[0]/C'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_148_5/clk_out1' to pin 'clk_148_5/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_148_5/clk_out2' to pin 'clk_148_5/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_148_5/clk_out3' to pin 'clk_148_5/bbstub_clk_out3/O'
+INFO: [Synth 8-5819] Moved 7 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 793.254 ; gain = 502.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+      : deal_data_0/i_1/G_data_100_in[13]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[13]
+      : deal_data_0/G_data_10_inferred/G_data_11[10]
+      : deal_data_0/i_1/G_data_110_out[9]
+      : deal_data_0/i_1/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_11[2]
+      : deal_data_0/i_1/G_data_110_out[1]
+      : deal_data_0/i_1/G_data_100_in[13]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[13]
+      : deal_data_0/G_data_10_inferred/G_data_11[10]
+      : deal_data_0/i_1/G_data_110_out[9]
+      : deal_data_0/i_1/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_11[2]
+      : deal_data_0/i_1/G_data_110_out[1]
+      : deal_data_0/G_data_10_inferred/G_data_11[4]
+      : deal_data_0/i_1/G_data_110_out[3]
+      : deal_data_0/i_1/G_data_100_in[0]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[0]
+      : deal_data_0/i_1/G_data_100_in[0]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[0]
+      : deal_data_0/i_1/G_data_100_in[0]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[0]
+      : deal_data_0/i_1/G_data_100_in[1]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[1]
+      : deal_data_0/i_1/G_data_100_in[0]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[0]
+      : deal_data_0/i_1/G_data_100_in[1]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[1]
+      : deal_data_0/i_1/G_data_100_in[0]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[0]
+      : deal_data_0/G_data_10_inferred/G_data_11[7]
+      : deal_data_0/i_1/G_data_110_out[6]
+      : deal_data_0/G_data_10_inferred/G_data_11[4]
+      : deal_data_0/i_1/G_data_110_out[3]
+      : deal_data_0/i_1/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[5]
+      : deal_data_0/i_1/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[5]
+      : deal_data_0/i_1/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[5]
+      : deal_data_0/i_1/G_data_100_in[2]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[2]
+      : deal_data_0/G_data_10_inferred/G_data_11[11]
+      : deal_data_0/i_1/G_data_110_out[10]
+      : deal_data_0/i_1/G_data_100_in[3]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[3]
+      : deal_data_0/G_data_10_inferred/G_data_11[9]
+      : deal_data_0/i_1/G_data_110_out[8]
+      : deal_data_0/G_data_10_inferred/G_data_11[7]
+      : deal_data_0/i_1/G_data_110_out[6]
+      : deal_data_0/G_data_10_inferred/G_data_11[11]
+      : deal_data_0/i_1/G_data_110_out[10]
+      : deal_data_0/G_data_10_inferred/G_data_11[8]
+      : deal_data_0/i_1/G_data_110_out[7]
+      : deal_data_0/i_1/G_data_100_in[9]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[9]
+      : deal_data_0/i_1/G_data_100_in[9]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[9]
+      : deal_data_0/G_data_10_inferred/G_data_11[10]
+      : deal_data_0/i_1/G_data_110_out[9]
+      : deal_data_0/G_data_10_inferred/G_data_11[13]
+      : deal_data_0/i_1/G_data_110_out[12]
+      : deal_data_0/i_1/G_data_100_in[10]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[10]
+      : deal_data_0/i_1/G_data_100_in[11]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[11]
+      : deal_data_0/G_data_10_inferred/G_data_11[11]
+      : deal_data_0/i_1/G_data_110_out[10]
+      : deal_data_0/i_1/G_data_100_in[13]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[13]
+      : deal_data_0/i_1/G_data_100_in[12]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[12]
+      : deal_data_0/i_1/G_data_100_in[6]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[6]
+      : deal_data_0/G_data_10_inferred/G_data_11[8]
+      : deal_data_0/i_1/G_data_110_out[7]
+      : deal_data_0/G_data_10_inferred/G_data_11[5]
+      : deal_data_0/i_1/G_data_110_out[4]
+      : deal_data_0/i_1/G_data_100_in[3]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[3]
+      : deal_data_0/i_1/G_data_100_in[4]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[4]
+      : deal_data_0/i_1/G_data_100_in[5]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[5]
+      : deal_data_0/i_1/G_data_100_in[11]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[11]
+      : deal_data_0/i_1/G_data_100_in[12]
+      : deal_data_0/G_data_10_inferred/G_data_100_in[12]
+      : deal_data_0/G_data_10_inferred/G_data_11[12]
+      : deal_data_0/i_1/G_data_110_out[11]
+      : deal_data_0/G_data_10_inferred/G_data_11[11]
+      : deal_data_0/i_1/G_data_110_out[10]
+      : deal_data_0/G_data_10_inferred/G_data_11[12]
+      : deal_data_0/i_1/G_data_110_out[11]
+      : deal_data_0/G_data_10_inferred/G_data_11[8]
+      : deal_data_0/i_1/G_data_110_out[7]
+      : deal_data_0/G_data_10_inferred/G_data_11[12]
+      : deal_data_0/i_1/G_data_110_out[11]
+      : deal_data_0/G_data_10_inferred/G_data_11[10]
+      : deal_data_0/i_1/G_data_110_out[9]
+      : deal_data_0/G_data_10_inferred/G_data_11[11]
+      : deal_data_0/i_1/G_data_110_out[10]
+      : deal_data_0/G_data_10_inferred/G_data_11[12]
+      : deal_data_0/i_1/G_data_110_out[11]
+      : deal_data_0/G_data_10_inferred/G_data_11[14]
+      : deal_data_0/i_1/G_data_110_out[13]
+      : deal_data_0/G_data_10_inferred/G_data_11[11]
+      : deal_data_0/i_1/G_data_110_out[10]
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/i_1/i_853/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/i_1/i_734/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/i_1/i_735/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/i_1/i_853/Z'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_376/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_377/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_372/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_376/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1174/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1167/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_667/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_666/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_668/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_667/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/i_1/i_946/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_392/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1551/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_146/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_694/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1550/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_147/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_61/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_379/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1581/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1162/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_694/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1162/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1716/O[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1716/O[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1188/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_675/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/i_1/i_955/O[0]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1715/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1717/O[2]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1715/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_397/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1485/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1769/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1769/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_232/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1714/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1195/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1188/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1186/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1717/O[2]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1195/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1196/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_436/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1714/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_461/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_454/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_449/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_441/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_443/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_474/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_468/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1167/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1196/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1202/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1222/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_436/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_443/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1717/O[1]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_449/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1197/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1719/O[1]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_32/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1718/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_31/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_29/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_33/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1717/O[1]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1243/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1230/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1236/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1586/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1300/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1264/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1230/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1251/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1252/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1258/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1169/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1718/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1718/O[1]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1251/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1286/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1280/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1313/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1306/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1312/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1299/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1305/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1292/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1298/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1283/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1733/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1733/CO[3]'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1258/O'
+WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through deal_data_0/G_data_10_inferred/i_1316/O'
+INFO: [Common 17-14] Message 'Synth 8-326' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_136' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_883' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_884' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_886' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_887' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_888' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_877' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_878' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_879' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_880' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1586' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_876' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1588' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_724' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_702' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_461' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_454' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_441' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_474' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_468' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_397' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_836' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_837' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_838' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1589' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1485' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_844' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_845' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_846' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_839' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_840' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_841' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_842' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_847' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/i_1/i_849' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1550' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1551' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_1581' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_666' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'deal_data_0/G_data_10_inferred/i_675' with timing assertions on output pin 'O'
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:52 . Memory (MB): peak = 821.980 ; gain = 530.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-139] cannot merge instances i_3540 and i_1109 because of non-equivalent assertions
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1109' with timing assertions on output pin 'O'
+INFO: [Synth 8-139] cannot merge instances i_1109 and i_3540 because of non-equivalent assertions
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1104' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1105' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1106' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1107' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1108' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1100' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1101' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1102' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1103' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1099' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1074' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1075' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1076' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1081' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1082' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1083' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1077' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1078' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1079' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1080' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1084' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1085' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\deal_data_0/i_775 ' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\deal_data_0/i_776 ' with timing assertions on output pin 'O'
+INFO: [Synth 8-139] cannot merge instances i_3540 and i_1109 because of non-equivalent assertions
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1109' with timing assertions on output pin 'O'
+INFO: [Synth 8-139] cannot merge instances i_1109 and i_3540 because of non-equivalent assertions
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1104' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1105' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1106' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1107' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1108' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1100' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1101' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1102' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1103' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1099' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1074' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1075' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1076' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1081' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1082' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1083' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1077' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1078' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1079' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1080' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1084' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1085' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\deal_data_0/i_775 ' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\deal_data_0/i_776 ' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1104' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1105' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1106' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1107' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1108' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1100' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1101' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1102' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1103' with timing assertions on output pin 'O'
+INFO: [Synth 8-620] skipping inversion-propagation across instance 'i_1109' with timing assertions on output pin 'O'
+INFO: [Common 17-14] Message 'Synth 8-620' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [E:/Desktop/posture_detection/posture_detection.srcs/sources_1/new/deal_data.v:84]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net \coor_trans_0/sin_table_inst/sin_value__0 [9] is driving 36 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+INFO: [Synth 8-6064] Net \coor_trans_0/cos_table_inst/cos_value__0 [9] is driving 36 big block pins (URAM, BRAM and DSP loads). Created 4 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         2|
+|2     |rgb2dvi_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |clk_wiz_0    |     1|
+|2     |clk_wiz_0__1 |     1|
+|3     |rgb2dvi_0    |     1|
+|4     |BUFG         |     1|
+|5     |CARRY4       |   235|
+|6     |DSP48E1      |     9|
+|7     |LUT1         |   137|
+|8     |LUT2         |   292|
+|9     |LUT3         |   318|
+|10    |LUT4         |   229|
+|11    |LUT5         |   161|
+|12    |LUT6         |   395|
+|13    |MUXF7        |    52|
+|14    |MUXF8        |     9|
+|15    |FDCE         |    68|
+|16    |FDPE         |     2|
+|17    |FDRE         |   185|
+|18    |FDSE         |     1|
+|19    |LD           |     1|
+|20    |IBUF         |     1|
+|21    |IOBUF        |     1|
+|22    |OBUF         |     5|
++------+-------------+------+
+
+Report Instance Areas: 
++------+----------------------------+-------------------+------+
+|      |Instance                    |Module             |Cells |
++------+----------------------------+-------------------+------+
+|1     |top                         |                   |  2116|
+|2     |  Gyro_Demo_0               |Gyro_Demo          |   367|
+|3     |    Driver_Gyro0            |Driver_Gyro        |   225|
+|4     |      Clk_Division0         |Clk_Division       |    50|
+|5     |      Clk_Division1         |Clk_Division_0     |    50|
+|6     |    Driver_IIC0             |Driver_IIC         |   139|
+|7     |  VGA_driver_0              |VGA_driver         |   189|
+|8     |  coor_trans_0              |coor_trans         |   385|
+|9     |    coor_trans_forward_inst |coor_trans_forward |     8|
+|10    |    coor_trans_reverse_inst |coor_trans_reverse |   107|
+|11    |    cos_table_inst          |cos_table          |    84|
+|12    |    sin_table_inst          |sin_table          |   159|
+|13    |  deal_data_0               |deal_data          |  1102|
++------+----------------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 835.477 ; gain = 544.375
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 374 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:03 . Memory (MB): peak = 835.477 ; gain = 231.457
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 835.477 ; gain = 544.375
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 307 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 835.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  LD => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+304 Infos, 156 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:16 . Memory (MB): peak = 835.477 ; gain = 555.977
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 835.477 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/Desktop/posture_detection/posture_detection.runs/synth_1/posture_detection.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file posture_detection_utilization_synth.rpt -pb posture_detection_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 31 20:50:34 2020...
